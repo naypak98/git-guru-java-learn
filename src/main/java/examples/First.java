@@ -1,8 +1,8 @@
-package ru.gitguru;
+package examples;
 
 import java.util.List;
 
-public class Main {
+public class First {
     public static void main(String... args) {
  //void - метод ничего не возвращает
 // () - аргументы метода
