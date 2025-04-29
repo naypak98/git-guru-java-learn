@@ -1,6 +1,9 @@
 package examples;
 
+import java.util.List;
+
 public class Human {
+    private static String staticName = "Human";
     private final String name;
     private final int age;
     private final boolean isCute;
@@ -49,6 +52,32 @@ public class Human {
         this.name = name;
         this.age = age;
         this.isCute = isCute;
+    }
+
+    public Human incrementAge() {
+        return new Human(
+                this.name,
+                (this.age + 1),
+                this.isCute
+        );
+    };
+
+//    static void sayHello() {
+//        System.out.println("Hello, " + this.name); //static не может ничего знать о состоянии объекта
+//    }
+    static void sayHello() {
+        System.out.println("Hello, " + staticName);
+    }
+    void sayHelloNonStatic() {
+        System.out.println("Hello, " + this.name);
+    }
+    void printSomeValues(int i, String str, List<String> list) {
+        i = 100;
+        list.add("Margo");
+        System.out.println("int: " + i + ", "
+                + "string: " + str.toUpperCase() + ", "
+                + "list: " + list);
+
     }
 
 
